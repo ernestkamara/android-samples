@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="OnboardingBubbleItem">
+        <attr format="string" name="bl_text"/>
+        <attr format="color" name="bl_text_color"/>
+        <attr format="string" name="bl_description"/>
+        <attr format="dimension" name="bl_margin_top"/>
+        <attr format="dimension" name="bl_margin_start"/>
+        <attr format="dimension" name="bl_margin_end"/>
+        <attr format="dimension" name="bl_margin_bottom"/>
+        <attr format="enum" name="bl_alignment">
+            <enum name="start" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="end" value="2"/>
+        </attr>
+    </declare-styleable>
+</resources>

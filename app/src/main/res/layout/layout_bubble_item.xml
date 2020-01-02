@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/bubbleItemContainer"
+    android:layout_width="@dimen/onboarding_bubble_item_size"
+    android:layout_height="@dimen/onboarding_bubble_item_size"
+    android:layout_gravity="center"
+    android:maxWidth="@dimen/onboarding_bubble_item_size"
+    android:maxHeight="@dimen/onboarding_bubble_item_size">
+
+    <TextView
+        android:id="@+id/bubbleItemTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:lineSpacingExtra="5sp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tool:visibility="visible"
+        tool:text="Bubble title" />
+
+    <TextView
+        android:id="@+id/bubbleItemDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:lineSpacingExtra="2sp"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bubbleItemTitle"
+        tool:visibility="visible"
+        tool:text="@string/first_bubble_description" />
+
+    <ImageView
+        android:id="@+id/bubbleItemIcons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_forbruk"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bubbleItemDescription"
+        tool:visibility="visible"
+        tool:ignore="ContentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
