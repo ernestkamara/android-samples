@@ -2,5 +2,15 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#14555A</color>
+
+    <color name="onboarding_background">#A5E1D2</color>
+
+    <color name="color_onboarding_page1">#008484</color>
+    <color name="color_onboarding_page2">@color/colorAccent</color>
+    <color name="color_onboarding_page3">#EBFFFA</color>
+
+    <color name="text_color_onboarding_page1">#fff</color>
+    <color name="text_color_onboarding_page2">#EBFFFA   </color>
+    <color name="text_color_onboarding_page3">@color/colorAccent</color>
 </resources>
