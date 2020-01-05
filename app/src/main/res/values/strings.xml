@@ -1,18 +1,18 @@
 <resources>
     <string name="app_name">Android Samples</string>
-    <string name="button_text_complete">Fullfør</string>
-    <string name="button_text_next">Neste</string>
-    <string name="button_text_previous">Forrige</string>
+    <string name="button_text_complete">Complete</string>
+    <string name="button_text_next">Next</string>
+    <string name="button_text_previous">Previous</string>
 
-    <string name="heading_text">Hvordan fungerer det?</string>
+    <string name="heading_text">Neque porro quisquam est qui</string>
 
-    <string name="first_bubble_description">Forteller deg hva du i det daglige bruker penger på, hvor du drar kortet eller hva du måtte ha av løpende utgifter.\n</string>
-    <string name="first_bubble_title">Forbruk</string>
+    <string name="first_bubble_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor purus\n</string>
+    <string name="first_bubble_title">Lorem ipsum</string>
 
-    <string name="second_bubble_title">Faste utgifter</string>
-    <string name="second_bubble_description">Her har vi samlet det meste av regninger og abonnementer som påløper regelmessig.\n</string>
+    <string name="second_bubble_title">Ut at urna </string>
+    <string name="second_bubble_description">Ut at urna non nibh viverra consequat. In a nibh a elit feugiat sagittis.\n</string>
 
-    <string name="third_bubble_title">Sparing</string>
-    <string name="third_bubble_description">- gir deg en oversikt over hvor mye av pengene som settes av til sparing, fond eller BSU.</string>
+    <string name="third_bubble_title">Aliquam vel dolor</string>
+    <string name="third_bubble_description">- aliquam vel dolor justo. Quisque posuere mollis turpis, eget scelerisque risus maximus vitae.</string>
     <string name="onboaring_with_motionlayout">Onboaring with MotionLayout</string>
 </resources>
