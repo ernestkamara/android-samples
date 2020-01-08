@@ -10,7 +10,6 @@ import android.util.TypedValue
 import android.view.Gravity
 import android.view.View
 import android.widget.FrameLayout
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import io.kamara.android.samples.R
@@ -30,37 +29,32 @@ constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
         View.inflate(context, R.layout.layout_bubble_item, this)
 
         val ta = context.obtainStyledAttributes(attrs, R.styleable.OnboardingBubbleItem)
-        try {
-            val textColor = ta.getColor(R.styleable.OnboardingBubbleItem_bl_text_color, Color.BLACK)
-            val gravity = ta.getInt(R.styleable.OnboardingBubbleItem_bl_alignment, 0)
-            val marginTop =
-                ta.getDimensionPixelSize(R.styleable.OnboardingBubbleItem_bl_margin_top, 16)
-            val marginStart =
-                ta.getDimensionPixelSize(R.styleable.OnboardingBubbleItem_bl_margin_start, 16)
-            val marginEnd =
-                ta.getDimensionPixelSize(R.styleable.OnboardingBubbleItem_bl_margin_end, 16)
-            val marginBottom =
-                ta.getDimensionPixelSize(R.styleable.OnboardingBubbleItem_bl_margin_bottom, 16)
-            val text = ta.getString(R.styleable.OnboardingBubbleItem_bl_text)
+        val textColor = ta.getColor(R.styleable.OnboardingBubbleItem_bl_text_color, Color.BLACK)
+        val gravity = ta.getInt(R.styleable.OnboardingBubbleItem_bl_alignment, 0)
+        val marginTop =
+            ta.getDimensionPixelSize(R.styleable.OnboardingBubbleItem_bl_margin_top, 16)
+        val marginStart =
+            ta.getDimensionPixelSize(R.styleable.OnboardingBubbleItem_bl_margin_start, 16)
+        val marginEnd =
+            ta.getDimensionPixelSize(R.styleable.OnboardingBubbleItem_bl_margin_end, 16)
+        val marginBottom =
+            ta.getDimensionPixelSize(R.styleable.OnboardingBubbleItem_bl_margin_bottom, 16)
+        val text = ta.getString(R.styleable.OnboardingBubbleItem_bl_text)
 
-            (bubbleItemTitle.layoutParams as ConstraintLayout.LayoutParams)
-                .setMargins(marginStart, marginTop, marginEnd, marginBottom)
-            bubbleItemTitle.text = text
-            bubbleItemTitle.setTextColor(textColor)
-            bubbleItemTitle.setTextGravity(gravity)
+        (bubbleItemTitle.layoutParams as ConstraintLayout.LayoutParams)
+            .setMargins(marginStart, marginTop, marginEnd, marginBottom)
+        bubbleItemTitle.text = text
+        bubbleItemTitle.setTextColor(textColor)
+        bubbleItemTitle.setTextGravity(gravity)
 
-            (bubbleItemDescription.layoutParams as ConstraintLayout.LayoutParams)
-                .setMargins(marginStart, 16, marginEnd, marginBottom)
+        (bubbleItemDescription.layoutParams as ConstraintLayout.LayoutParams)
+            .setMargins(marginStart, 16, marginEnd, marginBottom)
 
-            val description = ta.getString(R.styleable.OnboardingBubbleItem_bl_description)
-            bubbleItemDescription.text = description
-            bubbleItemDescription.setTextColor(textColor)
-            bubbleItemDescription.setTextGravity(gravity)
-
-            bubbleItemIcons.setGravity(gravity)
-        } finally {
-            ta.recycle()
-        }
+        val description = ta.getString(R.styleable.OnboardingBubbleItem_bl_description)
+        bubbleItemDescription.text = description
+        bubbleItemDescription.setTextColor(textColor)
+        bubbleItemDescription.setTextGravity(gravity)
+        ta.recycle()
     }
 
     private fun TextView.setTextGravity(value: Int) {
@@ -71,29 +65,11 @@ constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
         }
     }
 
-    private fun ImageView.setGravity(value: Int) {
-        val params = layoutParams as ConstraintLayout.LayoutParams
-        when (value) {
-            0 -> {
-                params.leftToLeft = ConstraintLayout.LayoutParams.PARENT_ID
-                params.setMargins(320, 20, 0, 0)
-            }
-            1 -> {
-                params.leftToRight = ConstraintLayout.LayoutParams.PARENT_ID
-                params.rightToRight = ConstraintLayout.LayoutParams.PARENT_ID
-            }
-            else -> {
-                params.rightToRight = ConstraintLayout.LayoutParams.PARENT_ID
-            }
-        }
-        requestLayout()
-    }
-
     private fun showDetails() {
         bubbleItemContainer
             .animate()
             .alpha(1f).setDuration(500)
-            .setListener(object : AnimatorListenerAdapter(){
+            .setListener(object : AnimatorListenerAdapter() {
                 override fun onAnimationEnd(animation: Animator) {
                     bubbleItemTitle.visibility = View.VISIBLE
                     bubbleItemDescription.visibility = View.VISIBLE
@@ -107,7 +83,7 @@ constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
         bubbleItemContainer
             .animate()
             .alpha(0f).setDuration(500)
-            .setListener(object : AnimatorListenerAdapter(){
+            .setListener(object : AnimatorListenerAdapter() {
                 override fun onAnimationEnd(animation: Animator) {
                     bubbleItemTitle.visibility = View.INVISIBLE
                     bubbleItemDescription.visibility = View.INVISIBLE

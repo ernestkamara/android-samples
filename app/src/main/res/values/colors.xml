@@ -2,15 +2,15 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#14555A</color>
+    <color name="colorAccent">#f1f1f1</color>
 
-    <color name="onboarding_background">#A5E1D2</color>
+    <color name="onboarding_background">#0E1211</color>
 
-    <color name="color_onboarding_page1">#008484</color>
-    <color name="color_onboarding_page2">@color/colorAccent</color>
-    <color name="color_onboarding_page3">#EBFFFA</color>
+    <color name="color_onboarding_page1">#A271F2</color>
+    <color name="color_onboarding_page2">#CC3CB2E2</color>
+    <color name="color_onboarding_page3">#222A7C</color>
 
-    <color name="text_color_onboarding_page1">#fff</color>
-    <color name="text_color_onboarding_page2">#EBFFFA   </color>
-    <color name="text_color_onboarding_page3">@color/colorAccent</color>
+    <color name="text_color_onboarding_page1">#f1f1f1</color>
+    <color name="text_color_onboarding_page2">#f1f1f1</color>
+    <color name="text_color_onboarding_page3">#f1f1f1</color>
 </resources>

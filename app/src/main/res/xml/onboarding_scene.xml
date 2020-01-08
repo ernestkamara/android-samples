@@ -91,11 +91,11 @@
 
         <Constraint
             android:id="@+id/thirdBubble"
-            android:layout_width="480dp"
+            android:layout_width="420dp"
             android:layout_height="@dimen/onboarding_bubble_item_size_xlarge"
             app:layout_constraintCircle="@+id/centerPlaceholder"
             app:layout_constraintCircleAngle="180"
-            app:layout_constraintCircleRadius="240dp"
+            app:layout_constraintCircleRadius="260dp"
             />
     </ConstraintSet>
 </MotionScene>

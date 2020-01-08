@@ -3,6 +3,6 @@
     <dimen name="onboarding_bubble_item_size">380dp</dimen>
     <dimen name="onboarding_bubble_item_size_xlarge">380dp</dimen>
     <dimen name="onboarding_bubble_item_size_large">100dp</dimen>
-    <dimen name="onboarding_bubble_item_size_medium">80dp</dimen>
-    <dimen name="onboarding_bubble_item_size_small">48dp</dimen>
+    <dimen name="onboarding_bubble_item_size_medium">90dp</dimen>
+    <dimen name="onboarding_bubble_item_size_small">60dp</dimen>
 </resources>
